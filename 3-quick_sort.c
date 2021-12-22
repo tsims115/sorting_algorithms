@@ -16,9 +16,9 @@ void swap(int *i, int *j)
 
 /**
  * partition - Lomuto parition
- * @arr: array to start
+ * @array: array to start
  * @low: lowest value
- * @high: highest value
+ * @hi: highest value
  * @size: size of array
  * Return: pivot
  *
