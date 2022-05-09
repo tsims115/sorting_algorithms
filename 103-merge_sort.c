@@ -45,7 +45,7 @@ void split_array(int *array, int *newArray, size_t size, int *sp)
 	printf("\n");
 	printf("[Done]: ");
 	for (i = 0; i < right_size + left_size; i++)
-		if (i == right_size - 1)
+		if (i == right_size + left_size - 1)
 			printf("%d", left_array[i]);
 		else
 			printf("%d, ", left_array[i]);
