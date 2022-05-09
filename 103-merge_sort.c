@@ -12,13 +12,14 @@
 
 void split_array(int *array, int *newArray, size_t size)
 {
-	(void)newArray;
+	
 	size_t i;
 	size_t left_size;
 	size_t right_size;
 	int *left_array;
 	int *right_array;
 
+	(void)newArray;
 	left_size = size / 2;
 	right_size = size - left_size;
 	left_array = array;
