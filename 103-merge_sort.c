@@ -71,9 +71,12 @@ void merge_sort(int *array, size_t size)
 		{
 			if (array[0] < array[1])
 			{
+				printf("Merging...\n[left]: %d\n", array[0]);
+				printf("[Right]: %d\n", array[1]);
 				tmp = array[1];
 				array[1] = array[0];
 				array[0] = tmp;
+				printf("[Done]: %d, %d\n", array[0], array[1]);
 			}
 		}
 		else
