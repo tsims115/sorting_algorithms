@@ -10,7 +10,7 @@
  */
 
 
-void split_array(int *array, int *newArray, size_t size)
+void split_array(int *array, int *newArray, size_t size, int *sp)
 {
 	size_t i;
 	size_t left_size = size / 2;
@@ -20,9 +20,9 @@ void split_array(int *array, int *newArray, size_t size)
 
 	(void)newArray;
 	if (left_size > 1)
-		merge_sort(left_array, left_size);
+		split_array(left_array, newArray, left_size, sp);
 	if (right_size > 1)
-		merge_sort(right_array, right_size);
+		split_array(right_array, newArray, right_size, sp);
 	printf("Merging...\n");
 	printf("[left]: ");
 	for (i = 0; i < left_size; i++)
@@ -36,6 +36,7 @@ void split_array(int *array, int *newArray, size_t size)
 	for (i = 0; i < right_size + left_size; i++)
 		printf("%d ", left_array[i]);
 	printf("\n");
+	*sp += 1;
 }
 
 /**
@@ -45,8 +46,10 @@ void split_array(int *array, int *newArray, size_t size)
  */
 void merge_sort(int *array, size_t size)
 {
+	int start_point = 0;
+	int *sp = &start_point;
 	int *newArray = malloc(sizeof(int) * size);
 
-	split_array(array, newArray, size);
+	split_array(array, newArray, size, sp);
 	free(newArray);
 }
