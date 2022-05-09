@@ -60,11 +60,24 @@ void split_array(int *array, int *newArray, size_t size, int *sp)
  */
 void merge_sort(int *array, size_t size)
 {
+	int tmp;
 	int start_point = 0;
 	int *sp = &start_point;
 	int *newArray = malloc(sizeof(int) * size);
 
 	if (size > 1)
-		split_array(array, newArray, size, sp);
+	{
+		if (size == 2)
+		{
+			if (array[0] < array[1])
+			{
+				tmp = array[1];
+				array[1] = array[0];
+				array[0] = tmp;
+			}
+		}
+		else
+			split_array(array, newArray, size, sp);
+	}
 	free(newArray);
 }
