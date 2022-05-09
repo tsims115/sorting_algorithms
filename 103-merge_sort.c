@@ -14,6 +14,7 @@ void split_array(int *array, int *newArray, size_t size)
 {
 	(void)newArray;
 	size_t i;
+
 	size_t left_size = size / 2;
 	size_t right_size = size - left_size;
 	int *left_array = array;
