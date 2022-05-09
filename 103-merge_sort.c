@@ -51,7 +51,7 @@ void merge_sort(int *array, size_t size)
 	int *sp = &start_point;
 	int *newArray = malloc(sizeof(int) * size);
 
-	if size > 0:
+	if (size > 0)
 		split_array(array, newArray, size, sp);
 	free(newArray);
 }
