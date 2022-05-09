@@ -48,4 +48,5 @@ void merge_sort(int *array, size_t size)
 	int *newArray = malloc(sizeof(int) * size);
 
 	split_array(array, newArray, size);
+	free(newArray);
 }
