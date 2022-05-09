@@ -12,18 +12,13 @@
 
 void split_array(int *array, int *newArray, size_t size)
 {
-	
 	size_t i;
-	size_t left_size;
-	size_t right_size;
-	int *left_array;
-	int *right_array;
+	size_t left_size = size / 2;
+	size_t right_size = size - left_size;
+	int *left_array = array;
+	int *right_array = array + left_size;
 
 	(void)newArray;
-	left_size = size / 2;
-	right_size = size - left_size;
-	left_array = array;
-	right_array = array + left_size;
 	if (left_size > 1)
 		merge_sort(left_array, left_size);
 	if (right_size > 1)
