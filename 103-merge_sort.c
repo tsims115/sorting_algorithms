@@ -27,15 +27,28 @@ void split_array(int *array, int *newArray, size_t size, int *sp)
 	printf("Merging...\n");
 	printf("[left]: ");
 	for (i = 0; i < left_size; i++)
-		printf("%d ", left_array[i]);
+	{
+		if (i == left_size - 1)
+			printf("%d", left_array[i]);
+		else
+			printf("%d, ", left_array[i]);
+	}
 	printf("\n");
 	printf("[right]: ");
 	for (i = 0; i < right_size; i++)
-		printf("%d ", right_array[i]);
+	{
+		if (i == right_size - 1)
+			printf("%d", right_array[i]);
+		else
+			printf("%d, ", right_array[i]);
+	}
 	printf("\n");
 	printf("[Done]: ");
 	for (i = 0; i < right_size + left_size; i++)
-		printf("%d ", left_array[i]);
+		if (i == right_size - 1)
+			printf("%d", left_array[i]);
+		else
+			printf("%d, ", left_array[i]);
 	printf("\n");
 	*sp += 1;
 }
