@@ -4,7 +4,7 @@
 
 /**
  * heap_sort - heap sorts an array
- * 
+ *
  * @array: array to sort
  * @size: size of the array
  */
