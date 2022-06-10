@@ -72,5 +72,6 @@ void radix_sort(int *array, size_t size)
 		print_array(array, size);
 		
 	}
-	array = array_copy;
+	free(array_copy);
+	free(new_array);
 }
