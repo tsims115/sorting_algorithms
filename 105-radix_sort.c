@@ -45,6 +45,7 @@ void radix_sort(int *array, size_t size)
 
 	if (size == 0)
 	{
+		free(array_copy), free(new_array);
 		return;
 	}
 	for (i = 0; i < size; i++)
@@ -58,11 +59,9 @@ void radix_sort(int *array, size_t size)
 		max /= 10;
 		degree++;
 	}
-
 	count_sort(array, array_copy, new_array, size);
 	while (flag <= degree)
 	{
-		
 		flag++;
 		for (i = 0; i < size; i++)
 		{
@@ -75,6 +74,5 @@ void radix_sort(int *array, size_t size)
 		count_sort(array, array_copy, new_array, size);
 		print_array(array, size);
 	}
-	free(array_copy);
-	free(new_array);
+	free(array_copy), free(new_array);
 }
