@@ -46,7 +46,7 @@ void radix_sort(int *array, size_t size)
 	int *array_copy = malloc(sizeof(int) * size);
 	int *new_array = malloc(sizeof(int) * size);
 
-	if (size == 0)
+	if (size < 2)
 	{
 		free(array_copy), free(new_array);
 		return;
