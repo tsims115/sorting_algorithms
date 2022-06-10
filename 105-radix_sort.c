@@ -3,9 +3,12 @@
 
 
 /**
- * count_sort: count sorts the array by smallest number first
- * @array
+ * count_sort - counts sorts the array
  *
+ * @array: original array
+ * @array_copy: copy of original array
+ * @new_array: array to store new array
+ * @size: size of the array
  */
 
 void count_sort(int *array, int *array_copy, int *new_array, size_t size)
