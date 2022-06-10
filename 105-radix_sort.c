@@ -43,7 +43,11 @@ void radix_sort(int *array, size_t size)
 	int *array_copy = malloc(sizeof(int) * size);
 	int *new_array = malloc(sizeof(int) * size);
 
-	for i = 0; i < size; i++)
+	if (size == 0)
+	{
+		return;
+	}
+	for (i = 0; i < size; i++)
 	{
 		if (array[i] > max)
 			max = array[i];
