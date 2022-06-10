@@ -5,7 +5,7 @@
 /**
  * count_sort: count sorts the array by smallest number first
  * @array
- * 
+ *
  */
 
 void count_sort(int *array, int *array_copy, int *new_array, size_t size)
@@ -69,7 +69,7 @@ void radix_sort(int *array, size_t size)
 			array_copy[i] = new_array[i];
 		}
 		for (i = 0; i < flag; i++)
-			for(j = 0; j < size; j++)
+			for (j = 0; j < size; j++)
 				array_copy[j] /= 10;
 		count_sort(array, array_copy, new_array, size);
 		print_array(array, size);
