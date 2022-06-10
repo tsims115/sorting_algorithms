@@ -14,9 +14,9 @@ void count_sort(int *array, int *array_copy, int *new_array, size_t size)
 	int i;
 	int idx = 0;
 
-	for(i = 0; i < 10; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for(j = 0; j < size; j++)
+		for (j = 0; j < size; j++)
 		{
 			if (array_copy[j] % 10 == i)
 			{
@@ -43,20 +43,20 @@ void radix_sort(int *array, size_t size)
 	int *array_copy = malloc(sizeof(int) * size);
 	int *new_array = malloc(sizeof(int) * size);
 
-	for(i = 0; i < size; i++)
+	for i = 0; i < size; i++)
 	{
 		if (array[i] > max)
 			max = array[i];
 		array_copy[i] = array[i];
 	}
-	while(max > 10)
+	while (max > 10)
 	{
 		max /= 10;
 		degree++;
 	}
 
 	count_sort(array, array_copy, new_array, size);
-	while(flag <= degree)
+	while (flag <= degree)
 	{
 		
 		flag++;
