@@ -24,14 +24,14 @@ void count_sort(int *array, int *array_copy, int *new_array, size_t size)
 				idx++;
 			}
 		}
-	}	
+	}
 }
 
 /**
  * radix_sort - sortsd using radix method
- * 
+ *
  * @array: array to sort
- * @size: size of the array 
+ * @size: size of the array
  */
 
 void radix_sort(int *array, size_t size)
@@ -70,7 +70,6 @@ void radix_sort(int *array, size_t size)
 				array_copy[j] /= 10;
 		count_sort(array, array_copy, new_array, size);
 		print_array(array, size);
-		
 	}
 	free(array_copy);
 	free(new_array);
