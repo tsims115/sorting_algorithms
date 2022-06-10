@@ -57,7 +57,7 @@ void radix_sort(int *array, size_t size)
 			max = array[i];
 		array_copy[i] = array[i];
 	}
-	while (max > 10)
+	while (max >= 10)
 	{
 		max /= 10;
 		degree++;
